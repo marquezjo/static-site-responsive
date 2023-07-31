@@ -1,0 +1,182 @@
+/******** GLOBAL STYLES ********/
+html {
+	font-size: 16px; /* Set the base font size to 16px */
+  }
+  
+  body {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 0.9em; /* 0.9em = 90% of the base font size (16px) */
+	color: #000000;
+  }
+  
+  /* The width property has been changed to max-width */
+  .content-wrapper {
+	max-width: 1200px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	flex-flow: row wrap; /* For mobile devices, allow flex items to wrap */
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+	text-transform: uppercase;
+	font-weight: 700;
+  }
+  
+  h1 {
+	font-size: 2rem; /* 2rem = 32px (based on the base font size) */
+  }
+  
+  h2 {
+	font-size: 1.5rem; /* 1.5rem = 24px (based on the base font size) */
+  }
+  
+  h3 {
+	font-size: 1.25rem; /* 1.25rem = 20px (based on the base font size) */
+  }
+  
+  h4 {
+	font-size: 0.75rem; /* 0.75rem = 12px (based on the base font size) */
+  }
+  
+  p {
+	line-height: 1.5;
+  }
+  
+  /******** HEADER STYLES ********/
+  /* Add display: flex; and justify-content: center; */
+  header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  header h1 {
+	margin: 0;
+	padding: 2.375rem 0;
+	width: 100%; /* Adjust width to fit on its own row */
+  }
+  
+  header h1 span {
+	color: #45610E;
+  }
+  
+  header nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+  }
+  
+  header nav ul li {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0 10px;
+	width: 100%; /* Adjust width to fit on its own row */
+  }
+  
+  header nav ul li a {
+	text-decoration: none;
+	color: #45610E;
+  }
+  
+  /********  MAIN STYLES ********/
+  /******** TOP SECTION ********/
+  /* Add display: flex; and justify-content: center; */
+  .top-section,
+  .bottom-section {
+	display: flex;
+	justify-content: center;
+  }
+  
+  .main-image img {
+	width: 100%;
+	border-top: 3px solid #77A466;
+	border-bottom: 3px solid #77a466;
+  }
+  
+  .main-title h2 {
+	color: #45610E;
+	padding: 0.3125rem 0;
+  }
+  
+  /******** BOTTOM SECTION ********/
+  .top-section,
+  .bottom-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .bottom-section .content-wrapper {
+	border-top: 5px solid #EEE;
+	border-bottom: 5px solid #EEE;
+  }
+  
+  .section-one,
+  .section-two,
+  .section-three {
+	box-sizing: border-box;
+	flex: 1;
+	padding: 0 2.5%;
+	width: 100%; /* Adjust width to fit on its own row */
+  }
+  
+  .section-two {
+	flex: 2;
+	border-left: 5px solid #EEE;
+	border-right: 5px solid #EEE;
+  }
+  
+  .bottom-section h3 {
+	margin: 1.875rem 0;
+  }
+  
+  .menu-list {
+	padding-left: 0;
+	list-style: none;
+  }
+  
+  .menu-list li {
+	color: #45610E;
+	font-size: 1rem;
+	line-height: 1.5;
+  }
+  
+  /******** FOOTER STYLES ********/
+  /* Add display: flex; and justify-content: center; */
+  footer {
+	display: flex;
+	justify-content: center;
+	margin-top: 0.5rem;
+  }
+  
+  footer span {
+	font-family: 'Galada', cursive;
+	text-transform: lowercase;
+	color: #45610E;
+	font-size: 0.875rem;
+  }
+  
+  /******** MEDIA QUERY FOR MOBILE ********/
+  @media screen and (max-width: 768px) {
+	/* Adjust styles for mobile devices */
+	.content-wrapper {
+	  width: 100%; /* Full width for mobile devices */
+	}
+  
+	.section-one,
+	.section-two,
+	.section-three {
+	  flex: 100%; /* Full width for sections on mobile devices */
+	  padding: 0; /* Remove padding on mobile devices */
+	}
+  
+	.section-two {
+	  border: none; /* Remove borders on mobile devices */
+	}
+  }
