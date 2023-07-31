@@ -54,34 +54,38 @@ html {
 	align-items: center;
   }
   
-  header h1 {
-	margin: 0;
-	padding: 2.375rem 0;
-	width: 100%; /* Adjust width to fit on its own row */
+  header .content-wrapper {
+	display: flex; /* Add Flexbox to create a flex container */
+	justify-content: space-between; /* Any extra space is added between h1 and nav */
+	align-items: center; /* Align h1 and nav at their centers vertically */
+	padding: 10px 0; /* Add padding to the top and bottom */
   }
   
-  header h1 span {
-	color: #45610E;
+  header h1 {
+	width: 50%; /* You can adjust the width as needed based on your design */
+	padding: 20px; /* Add padding as needed */
+	border-bottom: 2px solid #45610E; /* Add a border at the bottom of the h1 */
+	text-align: center; /* Center the text horizontally */
+  }
+  
+  header nav {
+	width: 21%; /* Set the width of the nav to 21% */
   }
   
   header nav ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	list-style: none;
+	display: flex; /* Change display to flex for nav ul */
+	justify-content: center; /* Center nav items horizontally */
+	list-style: none; /* Remove default list styles */
+	padding: 0; /* Remove default padding from ul */
   }
   
   header nav ul li {
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: uppercase;
-	padding: 0 10px;
-	width: 100%; /* Adjust width to fit on its own row */
+	padding: 0 15px; /* Add spacing between nav items */
   }
   
   header nav ul li a {
-	text-decoration: none;
 	color: #45610E;
+	text-decoration: none; /* Remove underline from links */
   }
   
   /********  MAIN STYLES ********/
@@ -162,9 +166,9 @@ html {
 	font-size: 0.875rem;
   }
   
-  /******** MEDIA QUERY FOR MOBILE ********/
-  @media screen and (max-width: 768px) {
-	/* Adjust styles for mobile devices */
+  /******** MEDIA QUERIES ********/
+  /* Mobile Styles */
+  @media all and (max-width: 767px) {
 	.content-wrapper {
 	  width: 100%; /* Full width for mobile devices */
 	}
@@ -178,5 +182,35 @@ html {
   
 	.section-two {
 	  border: none; /* Remove borders on mobile devices */
+	}
+  }
+  
+  /* Tablet Styles */
+  @media all and (min-width: 768px) and (max-width: 1199px) {
+	.bottom-section .content-wrapper {
+	  justify-content: space-evenly; /* Space the columns evenly */
+	}
+  
+	.section-one {
+	  width: 30%; /* Adjust width for tablet */
+	}
+  
+	.section-two {
+	  width: 40%; /* Adjust width for tablet */
+	  border: 1px solid #EEE; /* Add vertical borders */
+	  padding: 0 20px; /* Add padding to create space between text and borders */
+	  border-top: none; /* Remove top border */
+	  border-bottom: none; /* Remove bottom border */
+	}
+  
+	.section-three {
+	  width: 30%; /* Adjust width for tablet */
+	}
+  }
+  
+  /* Desktop Styles */
+  @media all and (min-width: 1200px) {
+	body {
+	  font-size: 1em; /* Set font size back to 1em for desktop */
 	}
   }
